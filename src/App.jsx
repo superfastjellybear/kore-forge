@@ -125,7 +125,7 @@ function Nav() {
       <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
         {[["Expertise", "pipeline"], ["Collective", "collective"], ["Model Lab", "modellab"], ["Projects", "projects"], ["Contact", "contact"]].map(([label, id]) => (
           <button key={id} onClick={() => scroll(id)}
-            style={{ background: "none", border: "none", cursor: "pointer", fontSize: 12, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "#888888", transition: "color 0.2s" }}
+            style={{ background: "none", border: "none", cursor: "pointer", fontSize: 12, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "#CCCCCC", transition: "color 0.2s" }}
             onMouseEnter={e => e.target.style.color = "#EFEFEF"}
             onMouseLeave={e => e.target.style.color = "#888888"}>
             {label}
@@ -189,12 +189,12 @@ function Hero() {
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 10 }}>
               Automotive · Mobility · Product Design
             </div>
-            <p style={{ fontSize: "clamp(15px, 1.4vw, 18px)", color: "#888", lineHeight: 1.0, fontStyle: "italic", fontWeight: 300 }}>
+            <p style={{ fontSize: "clamp(15px, 1.4vw, 18px)", color: "#CCCCCC", lineHeight: 1.0, fontStyle: "italic", fontWeight: 300 }}>
               A curated collective — from sketch to prototype.
             </p>
           </div>
 
-          <p style={{ fontSize: "clamp(13px, 1.1vw, 15px)", color: "#888", maxWidth: 380, lineHeight: 1.75 }}>
+          <p style={{ fontSize: "clamp(13px, 1.1vw, 15px)", color: "#CCCCCC", maxWidth: 380, lineHeight: 1.75 }}>
             One brief, one contract, one point of contact. Independent specialists assembled exactly around your project — no more, no less.
           </p>
         </motion.div>
@@ -206,7 +206,7 @@ function Hero() {
           transition={{ duration: 0.5, delay: 1.15 }}
           style={{ display: "flex", gap: 3, flexWrap: "wrap", marginTop: "clamp(28px, 4vh, 48px)" }}>
           {["Design & AI", "3D & Engineering", "CMF", "Electronics", "Model Lab"].map((t) => (
-            <div key={t} style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", padding: "9px 16px", border: "1px solid #232323", color: "#777", borderRadius: 2 }}>{t}</div>
+            <div key={t} style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", padding: "9px 16px", border: "1px solid #232323", color: "#BBBBBB", borderRadius: 2 }}>{t}</div>
           ))}
         </motion.div>
       </div>
@@ -221,10 +221,10 @@ function Pipeline() {
     <section id="pipeline" style={{ background: "#141414", borderTop: "1px solid #232323", padding: "100px 48px" }}>
       <Reveal>
         <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 16 }}>Full Spectrum Coverage</p>
-        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: 16 }}>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, color: "#FFFFFF", marginBottom: 16 }}>
           Everything your project needs.<br />Nothing it doesn't.
         </h2>
-        <p style={{ fontSize: 16, color: "#888888", maxWidth: 520, lineHeight: 1.7, marginBottom: 64 }}>
+        <p style={{ fontSize: 16, color: "#CCCCCC", maxWidth: 520, lineHeight: 1.7, marginBottom: 64 }}>
           The collective covers the complete development pipeline. You engage only the phases your project requires — assembled and coordinated as one.
         </p>
       </Reveal>
@@ -263,10 +263,10 @@ function Collective() {
     <section id="collective" style={{ background: "#0C0C0C", borderTop: "1px solid #232323", padding: "100px 48px" }}>
       <Reveal>
         <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 16 }}>The Collective</p>
-        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: 16 }}>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, color: "#FFFFFF", marginBottom: 16 }}>
           Four independent specialists.<br />One unified delivery.
         </h2>
-        <p style={{ fontSize: 16, color: "#888888", maxWidth: 560, lineHeight: 1.75, marginBottom: 72 }}>
+        <p style={{ fontSize: 16, color: "#CCCCCC", maxWidth: 560, lineHeight: 1.75, marginBottom: 72 }}>
           Each entity is a senior independent studio with deep expertise in its domain. Not a network of generalists — specialists who have spent careers in the automotive and mobility industry.
         </p>
       </Reveal>
@@ -299,12 +299,12 @@ function Collective() {
                   {/* Col 1: identity */}
                   <div>
                     <div style={{ fontSize: 12, fontWeight: 700, color: e.color, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 6 }}>{e.role}</div>
-                    <div style={{ fontSize: 11, color: "#888", letterSpacing: "0.06em", marginBottom: 4 }}>{e.xp} experience</div>
-                    <div style={{ fontSize: 11, color: "#777", lineHeight: 1.6 }}>{e.industries}</div>
+                    <div style={{ fontSize: 11, color: "#CCCCCC", letterSpacing: "0.06em", marginBottom: 4 }}>{e.xp} experience</div>
+                    <div style={{ fontSize: 11, color: "#BBBBBB", lineHeight: 1.6 }}>{e.industries}</div>
                   </div>
                   {/* Col 2-3: description spanning two cols */}
                   <div style={{ gridColumn: "2 / 4" }}>
-                    <p style={{ fontSize: 14, color: "#777", lineHeight: 1.8 }}>{e.body}</p>
+                    <p style={{ fontSize: 14, color: "#BBBBBB", lineHeight: 1.8 }}>{e.body}</p>
                   </div>
                 </div>
 
@@ -323,7 +323,7 @@ function Cases() {
     <section id="cases" style={{ background: "#141414", borderTop: "1px solid #232323", padding: "100px 48px" }}>
       <Reveal>
         <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 16 }}>Typical Engagements</p>
-        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: 64 }}>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, color: "#FFFFFF", marginBottom: 64 }}>
           How we work<br />in practice.
         </h2>
       </Reveal>
@@ -332,14 +332,14 @@ function Cases() {
           <Reveal key={c.title} delay={i * 0.1}>
             <div style={{ background: "#1C1C1C", display: "flex", flexDirection: "column", height: "100%" }}>
               <div style={{ height: 220, background: "#0C0C0C", display: "flex", alignItems: "center", justifyContent: "center", borderBottom: "1px solid #232323" }}>
-                <span style={{ fontSize: 11, color: "#666", letterSpacing: "0.15em", textTransform: "uppercase" }}>Visual to come</span>
+                <span style={{ fontSize: 11, color: "#AAAAAA", letterSpacing: "0.15em", textTransform: "uppercase" }}>Visual to come</span>
               </div>
               <div style={{ padding: "28px 28px 36px", flex: 1, display: "flex", flexDirection: "column" }}>
                 <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#C5F000", marginBottom: 10 }}>{c.type}</div>
                 <div style={{ fontSize: 17, fontWeight: 700, color: "#EFEFEF", marginBottom: 14, lineHeight: 1.3 }}>{c.title}</div>
-                <p style={{ fontSize: 14, color: "#888888", lineHeight: 1.75, flex: 1, marginBottom: 24 }}>{c.desc}</p>
+                <p style={{ fontSize: 14, color: "#CCCCCC", lineHeight: 1.75, flex: 1, marginBottom: 24 }}>{c.desc}</p>
                 <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                  <span style={{ fontSize: 11, color: "#666", letterSpacing: "0.08em", textTransform: "uppercase", marginRight: 4 }}>Team</span>
+                  <span style={{ fontSize: 11, color: "#AAAAAA", letterSpacing: "0.08em", textTransform: "uppercase", marginRight: 4 }}>Team</span>
                   {c.entities.map(id => {
                     const e = ENTITIES.find(x => x.id === id);
                     return (
@@ -366,10 +366,10 @@ function Projects() {
       <Reveal>
         <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 16 }}>Selected Work</p>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 52, gap: 32, flexWrap: "wrap" }}>
-          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0 }}>
+          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, color: "#FFFFFF" }}>
             Our work.
           </h2>
-          <p style={{ fontSize: 14, color: "#888888", maxWidth: 360, lineHeight: 1.7, fontStyle: "italic" }}>
+          <p style={{ fontSize: 14, color: "#CCCCCC", maxWidth: 360, lineHeight: 1.7, fontStyle: "italic" }}>
             References available upon request. Confidentiality applies to certain projects.
           </p>
         </div>
@@ -378,7 +378,7 @@ function Projects() {
         {Array(6).fill(null).map((_, i) => (
           <Reveal key={i} delay={i * 0.06}>
             <div style={{ background: "#1C1C1C", aspectRatio: "16/10", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid #232323" }}>
-              <div style={{ fontSize: 11, color: "#666", letterSpacing: "0.15em", textTransform: "uppercase" }}>Coming soon</div>
+              <div style={{ fontSize: 11, color: "#AAAAAA", letterSpacing: "0.15em", textTransform: "uppercase" }}>Coming soon</div>
             </div>
           </Reveal>
         ))}
@@ -421,13 +421,13 @@ function ModelLab() {
       {/* Header */}
       <Reveal>
         <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 16 }}>Model Lab</p>
-        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, marginBottom: 24 }}>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, color: "#FFFFFF", marginBottom: 24 }}>
           From validation tool<br />to exhibition piece.
         </h2>
-        <p style={{ fontSize: 16, color: "#999", maxWidth: 660, lineHeight: 1.8, marginBottom: 16 }}>
+        <p style={{ fontSize: 16, color: "#CCCCCC", maxWidth: 660, lineHeight: 1.8, marginBottom: 16 }}>
           Model Lab is a Kore Forge signature — born from the cross-competency of the collective. It is not traditional modelmaking. It is a new discipline of physical validation that removes the waste, the toxicity and the disposability of conventional mock-ups.
         </p>
-        <p style={{ fontSize: 16, color: "#999", maxWidth: 660, lineHeight: 1.8, marginBottom: 80 }}>
+        <p style={{ fontSize: 16, color: "#CCCCCC", maxWidth: 660, lineHeight: 1.8, marginBottom: 80 }}>
           Each object is designed to serve its purpose precisely during the project — and to remain relevant long after. Sensory, technical and artistic at once. An instrument first. A lasting object always.
         </p>
       </Reveal>
@@ -438,7 +438,7 @@ function ModelLab() {
           <Reveal key={p.label} delay={i * 0.08}>
             <div style={{ background: "#141414", padding: "32px 28px 36px", height: "100%", borderTop: "3px solid #C5F000" }}>
               <div style={{ fontSize: 13, fontWeight: 700, color: "#EFEFEF", marginBottom: 12, letterSpacing: "0.03em" }}>{p.label}</div>
-              <p style={{ fontSize: 13, color: "#888", lineHeight: 1.85 }}>{p.body}</p>
+              <p style={{ fontSize: 13, color: "#CCCCCC", lineHeight: 1.85 }}>{p.body}</p>
             </div>
           </Reveal>
         ))}
@@ -447,7 +447,7 @@ function ModelLab() {
       {/* Manifesto line */}
       <Reveal delay={0.35}>
         <div style={{ borderLeft: "4px solid #C5F000", paddingLeft: 28, maxWidth: 680, margin: "56px 0" }}>
-          <p style={{ fontSize: 17, color: "#888", lineHeight: 1.8, fontStyle: "italic" }}>
+          <p style={{ fontSize: 17, color: "#CCCCCC", lineHeight: 1.8, fontStyle: "italic" }}>
             "The model is no longer a disposable step in the process. It is a resolved object — useful during development, valuable after. Not because we decided so, but because it was built that way from the start."
           </p>
         </div>
@@ -456,8 +456,8 @@ function ModelLab() {
       {/* Examples — non-exhaustive */}
       <Reveal delay={0.1}>
         <div style={{ marginBottom: 32 }}>
-          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#666", marginBottom: 8 }}>Examples of Model Lab responses</p>
-          <p style={{ fontSize: 14, color: "#777", maxWidth: 560, lineHeight: 1.7 }}>
+          <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#AAAAAA", marginBottom: 8 }}>Examples of Model Lab responses</p>
+          <p style={{ fontSize: 14, color: "#BBBBBB", maxWidth: 560, lineHeight: 1.7 }}>
             Every project is different. The following are possible responses — not a fixed catalogue. Model Lab is defined by its principles, not its formats.
           </p>
         </div>
@@ -467,9 +467,9 @@ function ModelLab() {
         {approaches.map((a, i) => (
           <Reveal key={a.title} delay={i * 0.1}>
             <div style={{ background: "#1C1C1C", padding: "32px 28px 36px", height: "100%", display: "flex", flexDirection: "column", borderTop: "1px solid #232323" }}>
-              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#888", marginBottom: 14 }}>{a.tag}</div>
+              <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#CCCCCC", marginBottom: 14 }}>{a.tag}</div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#EFEFEF", marginBottom: 16, lineHeight: 1.25 }}>{a.title}</div>
-              <p style={{ fontSize: 13, color: "#888", lineHeight: 1.85, flex: 1 }}>{a.body}</p>
+              <p style={{ fontSize: 13, color: "#CCCCCC", lineHeight: 1.85, flex: 1 }}>{a.body}</p>
             </div>
           </Reveal>
         ))}
@@ -488,10 +488,10 @@ function Contact() {
 
         <Reveal>
           <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 20 }}>Start a Project</p>
-          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(48px, 8vw, 120px)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 0.88, textTransform: "uppercase", marginBottom: 32 }}>
+          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(48px, 8vw, 120px)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 0.88, textTransform: "uppercase", color: "#FFFFFF", marginBottom: 32 }}>
             Tell us<br />your brief.
           </h2>
-          <p style={{ fontSize: 18, color: "#999", maxWidth: 480, lineHeight: 1.75, marginBottom: 80 }}>
+          <p style={{ fontSize: 18, color: "#CCCCCC", maxWidth: 480, lineHeight: 1.75, marginBottom: 80 }}>
             Your first point of contact will be the entity closest to your project needs. We will assess the brief and propose the right team within 48 hours.
           </p>
         </Reveal>
@@ -527,7 +527,7 @@ function Contact() {
                     <div style={{ fontSize: 11, fontWeight: 600, color: e.color, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 12 }}>{e.role}</div>
 
                     {/* Email */}
-                    <div style={{ fontSize: 13, color: "#888", marginTop: "auto" }}>{e.email}</div>
+                    <div style={{ fontSize: 13, color: "#CCCCCC", marginTop: "auto" }}>{e.email}</div>
 
                   </div>
                 </a>
@@ -540,7 +540,7 @@ function Contact() {
         <Reveal delay={0.25}>
           <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
             {["kore-forge.com", "linkedin.com/company/kore-forge", "instagram.com/kore-forge"].map(link => (
-              <a key={link} href={`https://${link}`} style={{ fontSize: 13, color: "#666", textDecoration: "none", transition: "color 0.2s" }}
+              <a key={link} href={`https://${link}`} style={{ fontSize: 13, color: "#AAAAAA", textDecoration: "none", transition: "color 0.2s" }}
                 onMouseEnter={e => e.target.style.color = "#EFEFEF"}
                 onMouseLeave={e => e.target.style.color = "#3A3A3A"}>
                 {link}
@@ -569,7 +569,7 @@ function Footer() {
           <div key={e.id} style={{ width: 8, height: 8, borderRadius: "50%", background: e.color }} />
         ))}
       </div>
-      <p style={{ fontSize: 11, color: "#666", letterSpacing: "0.06em" }}>
+      <p style={{ fontSize: 11, color: "#AAAAAA", letterSpacing: "0.06em" }}>
         Automotive · Mobility · Product Design — Concept to Prototype
       </p>
     </footer>
