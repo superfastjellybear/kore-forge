@@ -183,6 +183,23 @@ function Nav() {
           </button>
         ))}
 
+        {/* Sound button */}
+        <button onClick={toggleAudio}
+          style={{ background: "none", border: `1px solid ${playing ? "#C5F000" : "#333"}`, cursor: "pointer", borderRadius: 2, padding: "6px 10px", display: "flex", alignItems: "center", gap: 6, transition: "border-color 0.2s", flexShrink: 0 }}>
+          {playing ? (
+            <svg width="12" height="12" viewBox="0 0 24 24" fill={playing ? "#C5F000" : "#555"}>
+              <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+            </svg>
+          ) : (
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#555">
+              <polygon points="5,3 19,12 5,21"/>
+            </svg>
+          )}
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: playing ? "#C5F000" : "#555" }}>
+            {playing ? "On" : "Off"}
+          </span>
+        </button>
+
       </div>
     </motion.nav>
   );
