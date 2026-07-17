@@ -1,0 +1,33 @@
+{
+  "applicationId": "com.koreforge.presentation",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "documentRoot": "/www/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "nativeAllowList": [
+    "app.*"
+  ],
+  "modes": {
+    "window": {
+      "title": "Kore Forge",
+      "width": 1440,
+      "height": 900,
+      "minWidth": 1024,
+      "minHeight": 640,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/www/favicon.svg",
+      "maximize": true
+    }
+  },
+  "cli": {
+    "binaryName": "KoreForge",
+    "resourcesPath": "/www/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/www/neutralino.js",
+    "binaryVersion": "nightly",
+    "clientVersion": "nightly"
+  }
+}
