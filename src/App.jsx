@@ -1291,11 +1291,21 @@ function Contact() {
               return (
                 <div key={e.id} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 10 }}>
                   <div style={{ height: 52, display: "flex", alignItems: "flex-end" }}>
-                    <img src={logoSrc} alt={e.name} style={{
-                      maxWidth: isSFJ ? 52 : isTwin ? 72 : isEvolve ? 44 : 110,
-                      maxHeight: isSFJ ? 52 : isTwin ? 54 : isEvolve ? 52 : 36,
-                      objectFit: "contain", objectPosition: "left bottom", display: "block", opacity: 0.85
-                    }} />
+                    {(e.id === "sfj" || e.id === "pikk") ? (
+                      <a href={e.id === "sfj" ? "https://superfastjellybear.com/" : "https://pikk2.com/"} target="_blank" rel="noopener noreferrer" style={{ display: "block", opacity: 0.85, transition: "opacity 0.2s" }} onMouseEnter={ev => ev.currentTarget.style.opacity = 1} onMouseLeave={ev => ev.currentTarget.style.opacity = 0.85}>
+                        <img src={logoSrc} alt={e.name} style={{
+                          maxWidth: isSFJ ? 52 : 110,
+                          maxHeight: isSFJ ? 52 : 36,
+                          objectFit: "contain", objectPosition: "left bottom", display: "block"
+                        }} />
+                      </a>
+                    ) : (
+                      <img src={logoSrc} alt={e.name} style={{
+                        maxWidth: isTwin ? 72 : isEvolve ? 44 : 110,
+                        maxHeight: isTwin ? 54 : isEvolve ? 52 : 36,
+                        objectFit: "contain", objectPosition: "left bottom", display: "block", opacity: 0.85
+                      }} />
+                    )}
                   </div>
                   <div style={{ width: "100%", height: 2, background: e.color, borderRadius: 1 }} />
                 </div>
