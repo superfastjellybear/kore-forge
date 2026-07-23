@@ -96,6 +96,16 @@ const IMG_PIKK_9  = "/images/entities/pikk-9.webp";
 const IMG_EVOLVE_1  = "/images/entities/evolve-1.webp";
 const IMG_EVOLVE_2  = "/images/entities/evolve-2.webp";
 const IMG_EVOLVE_3  = "/images/entities/evolve-3.webp";
+const IMG_EVOLVE_4 = "/images/entities/evolve-4.webp";
+const IMG_EVOLVE_5 = "/images/entities/evolve-5.webp";
+const IMG_EVOLVE_6 = "/images/entities/evolve-6.webp";
+const IMG_EVOLVE_7 = "/images/entities/evolve-7.webp";
+const IMG_EVOLVE_8 = "/images/entities/evolve-8.webp";
+const IMG_EVOLVE_9 = "/images/entities/evolve-9.webp";
+const IMG_EVOLVE_10 = "/images/entities/evolve-10.webp";
+const IMG_EVOLVE_11 = "/images/entities/evolve-11.webp";
+const IMG_EVOLVE_12 = "/images/entities/evolve-12.webp";
+const IMG_EVOLVE_13 = "/images/entities/evolve-13.webp";
 const IMG_TWIN_1  = "/images/entities/twin-1.webp";
 const IMG_TWIN_2  = "/images/entities/twin-2.webp";
 const IMG_TWIN_3  = "/images/entities/twin-3.webp";
@@ -154,7 +164,7 @@ const ENTITIES = [
     industries: "Automotive, Fashion, Consumer goods",
     body: "Colour, material and finish strategy from concept to production validation. Visual identity, graphic assets, pattern and livery design.",
     email: "contact@evolve.com",
-    gallery: [IMG_EVOLVE_1, IMG_EVOLVE_2, IMG_EVOLVE_3],
+    gallery: [IMG_EVOLVE_1, IMG_EVOLVE_2, IMG_EVOLVE_3, IMG_EVOLVE_4, IMG_EVOLVE_5, IMG_EVOLVE_6, IMG_EVOLVE_7, IMG_EVOLVE_8, IMG_EVOLVE_9, IMG_EVOLVE_10, IMG_EVOLVE_11, IMG_EVOLVE_12, IMG_EVOLVE_13],
   },
   {
     id: "twin", color: "#A0D400", initials: "TC", logo: "LOGO_TWIN",
