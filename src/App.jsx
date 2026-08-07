@@ -512,14 +512,9 @@ function EntityRow({ e, isMobile }) {
       onMouseLeave={handleLeave}
       style={{ background: "#1C1C1C", display: "flex", borderLeft: `4px solid ${e.color}`, overflow: "hidden", minHeight: IMG_H }}>
 
-      {/* Logo column */}
+      {/* Role column */}
       <div style={{ flexShrink: 0, width: isMobile ? 72 : 200, borderRight: "1px solid #232323", display: "flex", alignItems: "center", justifyContent: "center", padding: isMobile ? "16px 10px" : "24px 20px", background: hovered ? "#222" : "#161616", transition: "background 0.3s" }}>
-        <img src={logoSrc} alt={e.name}
-          style={{
-            maxWidth: isMobile ? 48 : isSFJ ? 130 : isTwin ? 150 : isEvolve ? 110 : 190,
-            maxHeight: isMobile ? (isSFJ ? 48 : isTwin ? 48 : isEvolve ? 48 : 30) : (isSFJ ? 130 : isTwin ? 115 : isEvolve ? 140 : 70),
-            objectFit: "contain", display: "block"
-          }} />
+        <div style={{ fontSize: isMobile ? 11 : 18, fontWeight: 800, color: e.color, letterSpacing: "0.04em", textTransform: "uppercase", lineHeight: 1.2, textAlign: "center" }}>{e.role}</div>
       </div>
 
       {/* Text column — fills remaining space, shrinks when gallery open */}
@@ -527,7 +522,6 @@ function EntityRow({ e, isMobile }) {
         animate={{ flex: hovered && hasGallery && !isMobile ? "0 0 auto" : "1 1 auto", width: hovered && hasGallery && !isMobile ? "calc(100% - 200px - " + IMG_W + "px)" : "auto" }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         style={{ padding: isMobile ? "20px 16px" : "28px 32px", display: "flex", flexDirection: "column", justifyContent: "center", gap: 10, overflow: "hidden", minWidth: 0, flex: 1 }}>
-        <div style={{ fontSize: 11, fontWeight: 700, color: e.color, letterSpacing: "0.1em", textTransform: "uppercase" }}>{e.role}</div>
         <div style={{ fontSize: 11, color: "#555" }}>{e.xp} experience &nbsp;&middot;&nbsp; {e.industries}</div>
         <p style={{ fontSize: 13, color: "#CCCCCC", lineHeight: 1.8 }}>{e.body}</p>
       </motion.div>
