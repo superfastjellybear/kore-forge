@@ -131,7 +131,7 @@ const C = {
   sfj:    "#FF5E00",
   pikk:   "#00C4B7",
   evolve: "#D113D1",
-  twin:   "#A0D400",
+  twin:   "#D62B16",
 };
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
@@ -167,7 +167,7 @@ const ENTITIES = [
     gallery: [IMG_EVOLVE_1, IMG_EVOLVE_2, IMG_EVOLVE_3, IMG_EVOLVE_4, IMG_EVOLVE_5, IMG_EVOLVE_6, IMG_EVOLVE_7, IMG_EVOLVE_8, IMG_EVOLVE_9, IMG_EVOLVE_10, IMG_EVOLVE_11, IMG_EVOLVE_12, IMG_EVOLVE_13],
   },
   {
-    id: "twin", color: "#A0D400", initials: "TC", logo: "LOGO_TWIN",
+    id: "twin", color: "#D62B16", initials: "TC", logo: "LOGO_TWIN",
     name: "Twin Core",
     role: "Electronics & Integration",
     xp: "20 years",
@@ -701,17 +701,9 @@ function CaseCard({ c, expanded, onToggle, isMobile, isTablet }) {
           <span style={{ fontSize: 11, color: "#AAAAAA", letterSpacing: "0.08em", textTransform: "uppercase", marginRight: 4 }}>Team</span>
           {c.entities.map(id => {
             const e = ENTITIES.find(x => x.id === id);
-            const logoSrc = e.id === "sfj" ? LOGO_SFJ : e.id === "pikk" ? LOGO_PIKK : e.id === "twin" ? LOGO_TWIN : LOGO_EVOLVE;
-            const isSFJ = e.id === "sfj";
-            const isTwin = e.id === "twin";
-            const isEvolve = e.id === "evolve";
             return (
               <div key={id} title={e.name}
-                style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", gap: 6, padding: "0 8px", height: 40 }}>
-                <img src={logoSrc} alt={e.name}
-                  style={{ maxHeight: isSFJ ? 28 : isTwin ? 27 : isEvolve ? 32 : 20, maxWidth: isSFJ ? 28 : isTwin ? 48 : isEvolve ? 26 : 80, objectFit: "contain", display: "block" }} />
-                <div style={{ width: "100%", height: 2, background: e.color, borderRadius: 1, flexShrink: 0 }} />
-              </div>
+                style={{ width: 20, height: 20, borderRadius: 3, background: e.color, flexShrink: 0 }} />
             );
           })}
         </div>
@@ -1280,37 +1272,10 @@ function Contact() {
           </p>
         </Reveal>
 
-        {/* Entity logos — horizontal strip */}
+        {/* KoreForge logo strip */}
         <Reveal delay={0.1}>
-          <div style={{ display: "flex", alignItems: "flex-end", gap: isMobile ? 32 : 56, flexWrap: "wrap", marginBottom: 64, paddingBottom: 40, borderBottom: "1px solid #232323" }}>
-            {ENTITIES.map((e) => {
-              const logoSrc = e.id === "sfj" ? LOGO_SFJ : e.id === "pikk" ? LOGO_PIKK : e.id === "twin" ? LOGO_TWIN : LOGO_EVOLVE;
-              const isSFJ = e.id === "sfj";
-              const isTwin = e.id === "twin";
-              const isEvolve = e.id === "evolve";
-              return (
-                <div key={e.id} style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 10 }}>
-                  <div style={{ height: 52, display: "flex", alignItems: "flex-end" }}>
-                    {(e.id === "sfj" || e.id === "pikk") ? (
-                      <a href={e.id === "sfj" ? "https://superfastjellybear.com/" : "https://pikk2.com/"} target="_blank" rel="noopener noreferrer" style={{ display: "block", opacity: 0.85, transition: "opacity 0.2s" }} onMouseEnter={ev => ev.currentTarget.style.opacity = 1} onMouseLeave={ev => ev.currentTarget.style.opacity = 0.85}>
-                        <img src={logoSrc} alt={e.name} style={{
-                          maxWidth: isSFJ ? 52 : 110,
-                          maxHeight: isSFJ ? 52 : 36,
-                          objectFit: "contain", objectPosition: "left bottom", display: "block"
-                        }} />
-                      </a>
-                    ) : (
-                      <img src={logoSrc} alt={e.name} style={{
-                        maxWidth: isTwin ? 72 : isEvolve ? 44 : 110,
-                        maxHeight: isTwin ? 54 : isEvolve ? 52 : 36,
-                        objectFit: "contain", objectPosition: "left bottom", display: "block", opacity: 0.85
-                      }} />
-                    )}
-                  </div>
-                  <div style={{ width: "100%", height: 2, background: e.color, borderRadius: 1 }} />
-                </div>
-              );
-            })}
+          <div style={{ marginBottom: 64, paddingBottom: 40, borderBottom: "1px solid #232323" }}>
+            <img src={LOGO_FULL} alt="Kore Forge" style={{ height: 36, display: "block", opacity: 0.9 }} />
           </div>
         </Reveal>
 
@@ -1384,10 +1349,28 @@ function Footer() {
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <img src={LOGO_ICON} alt="Kore Forge" style={{ height: 22, display: "block" }} />
       </div>
-      <div style={{ display: "flex", gap: 6 }}>
-        {ENTITIES.map(e => (
-          <div key={e.id} style={{ width: 8, height: 8, borderRadius: "50%", background: e.color }} />
-        ))}
+      <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+        {ENTITIES.map(e => {
+          const logoSrc = e.id === "sfj" ? LOGO_SFJ : e.id === "pikk" ? LOGO_PIKK : e.id === "twin" ? LOGO_TWIN : LOGO_EVOLVE;
+          const url = e.id === "sfj" ? "https://superfastjellybear.com/" : e.id === "pikk" ? "https://pikk2.com/" : null;
+          const isSFJ = e.id === "sfj";
+          const isTwin = e.id === "twin";
+          const isEvolve = e.id === "evolve";
+          const img = <img src={logoSrc} alt={e.name} style={{
+            height: isSFJ ? 22 : isTwin ? 18 : isEvolve ? 22 : 14,
+            maxWidth: 56,
+            objectFit: "contain", display: "block", opacity: 0.7, transition: "opacity 0.2s"
+          }} />;
+          return url ? (
+            <a key={e.id} href={url} target="_blank" rel="noopener noreferrer"
+              onMouseEnter={ev => ev.currentTarget.querySelector("img").style.opacity = 1}
+              onMouseLeave={ev => ev.currentTarget.querySelector("img").style.opacity = 0.7}>
+              {img}
+            </a>
+          ) : (
+            <div key={e.id}>{img}</div>
+          );
+        })}
       </div>
       <p style={{ fontSize: 11, color: "#AAAAAA", letterSpacing: "0.06em" }}>
         Automotive, Mobility, Product Design, Concept to Prototype
