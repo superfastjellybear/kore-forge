@@ -265,7 +265,7 @@ function Nav({ audioRef, audioPlaying, setAudioPlaying }) {
       style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 60, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 48px", background: "rgba(12,12,12,0.88)", backdropFilter: "blur(20px)", borderBottom: "1px solid #232323" }}>
       <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: 10 }}>
-        <img src={LOGO_ICON} alt="Kore Forge" style={{ height: 30, display: "block" }} />
+        <img src={LOGO_FULL} alt="Kore Forge" style={{ height: 26, display: "block" }} />
       </button>
       <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
         <div style={{ display: isMobile ? "none" : "flex", gap: 32, alignItems: "center" }}>
@@ -1275,7 +1275,7 @@ function Contact() {
         {/* KoreForge logo strip */}
         <Reveal delay={0.1}>
           <div style={{ marginBottom: 64, paddingBottom: 40, borderBottom: "1px solid #232323" }}>
-            <img src={LOGO_FULL} alt="Kore Forge" style={{ height: 36, display: "block", opacity: 0.9 }} />
+            <img src={LOGO_FULL} alt="Kore Forge" style={{ height: 56, display: "block", opacity: 0.9 }} />
           </div>
         </Reveal>
 
@@ -1347,7 +1347,7 @@ function Footer() {
   return (
     <footer style={{ background: "#080808", borderTop: "1px solid #232323", padding: "20px 48px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <img src={LOGO_ICON} alt="Kore Forge" style={{ height: 22, display: "block" }} />
+        <img src={LOGO_ICON} alt="Kore Forge" style={{ height: 44, display: "block" }} />
       </div>
       <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
         {ENTITIES.map(e => {
@@ -1357,7 +1357,7 @@ function Footer() {
           const isTwin = e.id === "twin";
           const isEvolve = e.id === "evolve";
           const img = <img src={logoSrc} alt={e.name} style={{
-            height: isSFJ ? 22 : isTwin ? 18 : isEvolve ? 22 : 14,
+            height: isSFJ ? 44 : isTwin ? 36 : isEvolve ? 44 : 28,
             maxWidth: 56,
             objectFit: "contain", display: "block", opacity: 0.7, transition: "opacity 0.2s"
           }} />;
