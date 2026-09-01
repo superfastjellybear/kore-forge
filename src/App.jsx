@@ -1415,8 +1415,8 @@ function Footer() {
           const isTwin = e.id === "twin";
           const isEvolve = e.id === "evolve";
           const img = <img src={logoSrc} alt={e.name} style={{
-            height: isSFJ ? 44 : isTwin ? 44 : isEvolve ? 24 : 20,
-            maxWidth: isTwin ? 44 : isEvolve ? 100 : isSFJ ? 56 : 90,
+            height: isSFJ ? 44 : isTwin ? 24 : isEvolve ? 24 : 20,
+            maxWidth: isTwin ? 24 : isEvolve ? 100 : isSFJ ? 56 : 90,
             objectFit: "contain", display: "block", opacity: 0.7, transition: "opacity 0.2s"
           }} />;
           return url ? (
