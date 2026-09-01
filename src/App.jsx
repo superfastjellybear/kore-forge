@@ -129,7 +129,7 @@ const C = {
   mid:    "#888888",
   dim:    "#3A3A3A",
   sfj:    "#FF5E00",
-  pikk:   "#00C4B7",
+  pikk:   "#0da3dc",
   evolve: "#D113D1",
   twin:   "#D62B16",
 };
@@ -147,7 +147,7 @@ const ENTITIES = [
     gallery: [IMG_SFJ_1, IMG_SFJ_2, IMG_SFJ_3, IMG_SFJ_4, IMG_SFJ_5, IMG_SFJ_6, IMG_SFJ_7, IMG_SFJ_8, IMG_SFJ_9],
   },
   {
-    id: "pikk", color: "#00C4B7", initials: "P²", logo: "LOGO_PIKK",
+    id: "pikk", color: "#0da3dc", initials: "P²", logo: "LOGO_PIKK",
     name: "Pikk²",
     role: "3D",
     xp: "15 years",
