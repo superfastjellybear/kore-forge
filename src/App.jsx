@@ -190,9 +190,9 @@ const CASES = [
   {
     type: "Motor Show Concept",
     title: "Lexus Compact Concept — Motor Show Study",
-    desc: "Full concept car development for a motor show presentation. From design direction to final photorealistic imagery. 3D modelling and Class A surfacing by Pikk², CMF strategy and material development by Evolve, embedded electronics and lighting system by BWolf Lab.",
+    desc: "Full concept car development for a motor show presentation. From design direction to final photorealistic imagery. 3D modelling and Class A surfacing, CMF support and print supply, embedded electronics and lighting system.",
     entities: ["pikk", "evolve", "twin"],
-    gallery: [IMG_MICRO_1, IMG_MICRO_2, IMG_MICRO_3, IMG_MICRO_4, IMG_MICRO_5, IMG_MICRO_6],
+    gallery: [IMG_MICRO_1, IMG_MICRO_2, IMG_MICRO_4, IMG_MICRO_5, IMG_MICRO_7],
   },
   {
     type: "Full Development Program",
