@@ -190,7 +190,7 @@ const CASES = [
   {
     type: "Motor Show Concept",
     title: "Lexus Micro Concept — Motor Show Study",
-    desc: "Full concept car development for a motor show presentation. From design direction to final photorealistic imagery. 3D modelling and Class A surfacing, CMF support and print supply, embedded electronics and lighting system.",
+    desc: "Motor show concept car. Design modelling, Class A surfacing and production 3D files, CMF support and print supply, embedded electronics and lighting system.",
     entities: ["pikk", "evolve", "twin"],
     gallery: [IMG_MICRO_1, IMG_MICRO_2, IMG_MICRO_4, IMG_MICRO_5, IMG_MICRO_7],
   },
