@@ -5,7 +5,7 @@ const LOGO_FULL  = "/images/logos/logo-full.webp";
 const LOGO_ICON  = "/images/logos/logo-icon.webp";
 const LOGO_SFJ  = "/images/logos/logo-sfj.webp";
 const LOGO_PIKK  = "/images/logos/logo-pikk.webp";
-const LOGO_TWIN  = "/images/logos/logo-twin.webp";
+const LOGO_TWIN  = "/images/logos/logo-bwolf.webp";
 const LOGO_EVOLVE  = "/images/logos/logo-evolve.webp";
 const LOGO_HERO  = "/images/logos/logo-hero.webp";
 
@@ -168,12 +168,12 @@ const ENTITIES = [
   },
   {
     id: "twin", color: "#D62B16", initials: "TC", logo: "LOGO_TWIN",
-    name: "Twin Core",
+    name: "BWolf Lab",
     role: "Electronics & Integration",
     xp: "20 years",
-    industries: "Mobility, Industrial, Embedded systems",
+    industries: "Automotive, Mobility, Embedded systems",
     body: "Embedded electronics designed and integrated on-site. Battery management, concept lighting systems, HMI, firmware and full-system validation.",
-    email: "contact@twin-core.com",
+    email: "contact@bwolflab.com",
     gallery: [IMG_TWIN_1, IMG_TWIN_2, IMG_TWIN_3, IMG_TWIN_4, IMG_TWIN_5, IMG_TWIN_6, IMG_TWIN_7, IMG_TWIN_8, IMG_TWIN_9, IMG_TWIN_10],
   },
 ];
@@ -188,11 +188,11 @@ const PIPELINE = [
 
 const CASES = [
   {
-    type: "Concept Study",
-    title: "Porsche Retrofit, Styling & Feasibility Study",
-    desc: "Complete styling and feasibility study for a heritage Porsche retrofit. Design leadership by Alan Derosier. Delivered as sketch direction, Class A surface data, 3D model, and photorealistic imagery. Scale model by Model Lab.",
-    entities: ["pikk", "sfj"],
-    gallery: [IMG_UNO_1, IMG_UNO_2, IMG_UNO_3, IMG_UNO_4],
+    type: "Motor Show Concept",
+    title: "Lexus Compact Concept — Motor Show Study",
+    desc: "Full concept car development for a motor show presentation. From design direction to final photorealistic imagery. 3D modelling and Class A surfacing by Pikk², CMF strategy and material development by Evolve, embedded electronics and lighting system by BWolf Lab.",
+    entities: ["pikk", "evolve", "twin"],
+    gallery: [IMG_MICRO_1, IMG_MICRO_2, IMG_MICRO_3, IMG_MICRO_4, IMG_MICRO_5, IMG_MICRO_6],
   },
   {
     type: "Full Development Program",
@@ -269,7 +269,7 @@ function Nav({ audioRef, audioPlaying, setAudioPlaying }) {
       </button>
       <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
         <div style={{ display: isMobile ? "none" : "flex", gap: 32, alignItems: "center" }}>
-          {[["Expertise", "pipeline"], ["Collective", "collective"], ["Model Lab", "modellab"], ["Projects", "projects"], ["Contact", "contact"]].map(([label, id]) => (
+          {[["Expertise", "pipeline"], ["Collective", "collective"], ["Model Lab", "modellab"], ["Embedded Kore", "embedded"], ["Projects", "projects"], ["Contact", "contact"]].map(([label, id]) => (
             <button key={id} onClick={() => scroll(id)}
               style={{ background: "none", border: "none", cursor: "pointer", fontSize: 12, fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", color: "#CCCCCC", transition: "color 0.2s" }}
               onMouseEnter={e => e.target.style.color = "#EFEFEF"}
@@ -1225,6 +1225,70 @@ function ModelLab() {
   );
 }
 
+
+// ─── EMBEDDED KORE ────────────────────────────────────────────────────────────
+function EmbeddedKore() {
+  const { isMobile, isTablet } = useBreakpoint();
+
+  const pillars = [
+    {
+      title: "Design Development",
+      body: "Taking the design direction and turning it into data your teams can actually work with, in the software and formats you already use.",
+    },
+    {
+      title: "3D & Mock-up Files",
+      body: "3D files and mock-up data at the right level of detail not over-engineered, not under-specified. Enough for your workshop to build with confidence.",
+    },
+    {
+      title: "External Parts Management",
+      body: "When the build needs parts from outside, we handle the sourcing, ordering and coordination. You don't chase suppliers. We do.",
+    },
+    {
+      title: "Workshop Follow-through",
+      body: "We stay on the workshop floor through assembly and finishing. The person who made the files is the person who checks the build.",
+    },
+  ];
+
+  return (
+    <section id="embedded" style={{ background: "#141414", borderTop: "1px solid #232323", padding: isMobile ? "64px 20px" : "100px 48px" }}>
+      <Reveal>
+        <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#C5F000", marginBottom: 16 }}>Embedded Kore</p>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, color: "#FFFFFF", marginBottom: 20 }}>
+          Your design studio.<br />Our team.<br />Your workshop.<br />One shared goal.
+        </h2>
+        <p style={{ fontSize: 16, color: "#CCCCCC", maxWidth: 660, lineHeight: 1.8, marginBottom: 16 }}>
+          You have the workshop. You have the craftsmen. What you're missing is the team that knows how to feed them the right files, the right parts, the right information at the right moment.
+        </p>
+        <p style={{ fontSize: 16, color: "#CCCCCC", maxWidth: 660, lineHeight: 1.8, marginBottom: 72 }}>
+          Embedded Kore puts a dedicated Kore Forge team inside your facility. We sit between your design studio and your workshop floor, making the connection that turns a design direction into something you can actually build. We work within your tools and processes, and we bring our own knowledge with us: advanced prototyping methods, manufacturing process expertise, and a supplier network that can complete what your workshop already has in place.
+        </p>
+      </Reveal>
+
+      {/* Four pillars */}
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : isTablet ? "1fr 1fr" : "repeat(4, 1fr)", gap: 2, marginBottom: 40 }}>
+        {pillars.map((p, i) => (
+          <Reveal key={p.title} delay={i * 0.08}>
+            <div style={{ background: "#1C1C1C", padding: "32px 28px 36px", height: "100%", borderTop: "3px solid #C5F000" }}>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginBottom: 14 }}>{p.title}</div>
+              <p style={{ fontSize: 13, color: "#AAAAAA", lineHeight: 1.85 }}>{p.body}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      {/* Engagement model */}
+      <Reveal delay={0.2}>
+        <div style={{ borderLeft: "4px solid #C5F000", paddingLeft: 28, maxWidth: 680 }}>
+          <p style={{ fontSize: 13, fontWeight: 700, color: "#C5F000", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>Engagement Model</p>
+          <p style={{ fontSize: 15, color: "#AAAAAA", lineHeight: 1.8 }}>
+            Embedded Kore works as a dedicated engagement a named team, physically present, for the duration of your programme. We size the involvement around what you actually need. You keep your structure. We fit into it.
+          </p>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
 // ─── CONTACT ──────────────────────────────────────────────────────────────────
 function Contact() {
   const { isMobile, isTablet } = useBreakpoint();
@@ -1387,6 +1451,7 @@ export default function App() {
       <WhatYouCanOrder />
       <Cases />
       <ModelLab />
+      <EmbeddedKore />
       <Projects audioRef={audioRef} setAudioPlaying={setAudioPlaying} />
       <Contact />
       <Footer />
